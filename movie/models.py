@@ -4,7 +4,4 @@ from django.db import models
 class Movie(models.Model):
     title = models.CharField(max_length=255)
     genre = models.CharField(max_length=255)
-    length = models.PositiveIntegerField()
-
-    def __str__(self) -> str:
-        return self.title
+    length = models.PositiveIntegerField(blank=True)
